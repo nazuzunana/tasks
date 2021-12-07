@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  button {
+    background: cornflowerblue;
+    color: white;
+    border: none;
+    padding: .5em 1em;
+    font-size: 1em;
+  }
+}
