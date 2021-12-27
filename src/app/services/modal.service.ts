@@ -9,7 +9,7 @@ import {ModalComponent} from '../components/modal/modal.component';
   providedIn: 'root'
 })
 export class ModalService {
-  private componentRef!: ComponentRef<ModalComponent>;
+  private componentRef?: ComponentRef<ModalComponent>;
 
   constructor() {
   }
@@ -21,6 +21,11 @@ export class ModalService {
   }
 
   closeModal(): void {
+    if (!this.componentRef) {
+      console.error('Component ref for modal does not exist!');
+      return;
+    }
+
     this.componentRef.destroy();
   }
 }
