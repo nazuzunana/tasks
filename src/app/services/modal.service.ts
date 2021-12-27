@@ -21,11 +21,6 @@ export class ModalService {
   }
 
   closeModal(): void {
-    if (!this.componentRef) {
-      console.error('Component ref for modal does not exist!');
-      return;
-    }
-
-    this.componentRef.destroy();
+    this.componentRef?.destroy();
   }
 }
