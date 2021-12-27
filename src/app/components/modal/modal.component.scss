@@ -1,4 +1,4 @@
-.modal-window {
+.modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -7,7 +7,7 @@
   z-index: 50;
   background-color: rgba(0, 0, 0, 0.8);
 
-  .modal-container {
+  &-container {
     max-width: 1192px;
     max-height: 406px;
     height: 100%;
@@ -18,28 +18,28 @@
     transform: translate(-50%, -50%);
     padding: 2em;
     background: #ffffff;
+  }
 
-    .modal-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2.5rem;
-      height: 100%;
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    height: 100%;
 
-      .modal-icon {
-        font-size: 2.625rem;
-        color: #28A745;
-        width: 3.7rem;
-        height: 3.7rem;
-      }
-
-      p {
-        font-family: Roboto-Bold, sans-serif;
-        text-align: center;
-        font-size: 2.625rem;
-        color: #28A745;
-      }
+    p {
+      font-family: Roboto-Bold, sans-serif;
+      text-align: center;
+      font-size: 2.625rem;
+      color: #28A745;
     }
+  }
+
+  &-icon {
+    font-size: 2.625rem;
+    color: #28A745;
+    width: 3.7rem;
+    height: 3.7rem;
   }
 }
 
