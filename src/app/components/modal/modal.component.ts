@@ -11,11 +11,11 @@ import {
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent {
-  constructor() {
-  }
-
   @Input() modalBody = '';
   @Output() closeModalEvent = new EventEmitter();
+
+  constructor() {
+  }
 
   closeModal(): void {
     this.closeModalEvent.emit();
