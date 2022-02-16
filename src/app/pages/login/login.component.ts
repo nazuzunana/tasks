@@ -8,11 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class LoginComponent implements OnInit {
 
-  title = 'Objednávkový systém'
-  first = ['Chci se', 'objednat na vyšetření']
-  second = ['Chci si', 'objednat recept']
-  first_active = false
-  second_active = true
+  isFirstActive = false
   cta = 'K objednání vyšetření'
   
   constructor() {
@@ -21,20 +17,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClickFirst(event: Event) {
-    if (this.first_active) {
-      this.first_active = false
-      this.second_active = true
+  onClickIsFirstActive(event: Event) {
+    if (this.isFirstActive) {
+      this.isFirstActive = false
       this.cta = 'K objednání vyšetření'
-    } 
-  }
-
-  onClickSecond(event: Event) {
-    if (this.second_active) {
-      this.first_active = true
-      this.second_active = false
+    } else {
+      this.isFirstActive = true
       this.cta = 'K objednání receptu'
     }
   }
-
 }
