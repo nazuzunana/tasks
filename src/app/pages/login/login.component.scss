@@ -32,8 +32,8 @@ button {
         background-color: $my-white;
         border: 1px solid $my-red;
 
-        width: 234px;
-        height: 69px;
+        min-width: 234px;
+        min-height: 69px;
         margin: 0;
 
         transition-property: color, border;
