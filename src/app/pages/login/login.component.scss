@@ -11,7 +11,6 @@ strong {
 h1 {
     font-family: 'Poppins';
     font-size: 24px;
-    color: #000000;
     text-align: center;
 }
 button {
@@ -36,7 +35,7 @@ button {
         text-align: left;
         transition-property: color, border;
         transition: 0.3s;
-        
+
         &.active {
             cursor: pointer;
             color: #C7C7C7;
@@ -57,8 +56,8 @@ button {
 
 .cta {
     cursor: pointer;
-    width: 283px;
-    height: 53px;
+    padding:  0 25px 0 15px;
+    min-height: 53px;
     display: flex;
     align-items: center;
     color: white;
@@ -67,12 +66,15 @@ button {
     border-radius: 6px;
 
     & > svg {
-        position: absolute;
-        margin-left: 220px;
+        position: relative;
+        margin-left: 22px;
     }
 }
 
 .login {
+    color: #000000;
+    background-color:  #F8F8F8;
+
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -85,9 +87,6 @@ button {
 
     font-family: 'Poppins';
     font-size: 16px;
-    color: white;
-
-    background-color:  #F8F8F8;
 
     &__box {
         width: $box-width;
@@ -95,6 +94,7 @@ button {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: white;
         background-color: #FFFFFF;
         box-shadow: 0px 3px 6px #00000029;
         border-radius: 6px;
