@@ -3,36 +3,38 @@
 
 $my-red: #E2001A;
 $box-width: 528px;
+$my-white: white;
+$shadow-color: #00000029;
+$my-font: 'Poppins', sans-serif;
 
 strong {
     font-weight: 700;
 }
 
 h1 {
-    font-family: 'Poppins';
     font-size: 24px;
     text-align: center;
 }
 button {
     margin: auto;
-    font-family: 'Poppins';
+    font-family: $my-font;
     font-size: 16px;
     line-height: 18px;
     padding: 0 0 0 15px;
+    text-align: left;
 }
 
 .choice {
     margin-bottom: 50px;
     button {
         color: $my-red;
-        background-color: white;
+        background-color: $my-white;
         border: 1px solid $my-red;
 
         width: 234px;
         height: 69px;
         margin: 0;
-    
-        text-align: left;
+
         transition-property: color, border;
         transition: 0.3s;
 
@@ -60,57 +62,49 @@ button {
     min-height: 53px;
     display: flex;
     align-items: center;
-    color: white;
+    color: $my-white;
     background-color: $my-red;
     border: none;
     border-radius: 6px;
 
     & > svg {
-        position: relative;
         margin-left: 22px;
     }
 }
 
 .login {
-    color: #000000;
+    width: 100%;
+    height: 100%;
+    color: black;
     background-color:  #F8F8F8;
-
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    font-family: 'Poppins';
+    font-family: $my-font;
     font-size: 16px;
 
     &__box {
-        width: $box-width;
-        height: 287px;
+        padding: 50px 30px 64px 50px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        background-color: #FFFFFF;
-        box-shadow: 0px 3px 6px #00000029;
+        background-color: $my-white;
+        box-shadow: 0px 3px 6px $shadow-color;
         border-radius: 6px;
         color: $my-red;
-        
+    
         &-content {
             display: block;
         }
     }
 
     &__link {
-        width: $box-width;
-        padding-top: 20px;
+        padding: 20px 320px 0 0;
         display: block;
         & > a {
-           
             color: $my-red;
             text-decoration: none;
             & > svg {
