@@ -1,1 +1,30 @@
-<p>login works!</p>
+<div class="login">
+    <h1>Objednávkový systém</h1>
+    <div class="login__box">
+        <div class="login__box-content">
+            <div class="choice">
+                <button (click)="onClickIsFirstActive($event)" [class.active]="isFirstActive">
+                    Chci se<br>
+                    <strong>objednat na vyšetření</strong>
+                </button>
+                <button (click)="onClickIsFirstActive($event)" [class.active]="!(isFirstActive)">
+                    Chci si<br>
+                    <strong>objednat recept</strong>
+                </button>
+            </div>
+            <button class="cta">
+                <strong>{{ cta }}</strong>
+                <svg width="30" height="11" viewBox="0 0 172 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 35.5C2.96243 35.5 0.5 37.9624 0.5 41C0.5 44.0376 2.96243 46.5 6 46.5L6 35.5ZM169.889 44.8891C172.037 42.7412 172.037 39.2588 169.889 37.1109L134.887 2.10913C132.739 -0.0387503 129.257 -0.0387505 127.109 2.10913C124.961 4.25702 124.961 7.73942 127.109 9.88731L158.222 41L127.109 72.1127C124.961 74.2606 124.961 77.743 127.109 79.8909C129.257 82.0388 132.739 82.0388 134.887 79.8909L169.889 44.8891ZM6 46.5L166 46.5L166 35.5L6 35.5L6 46.5Z" fill="white"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="login__link">
+    <a href="https://mild.blue/">
+        <svg width="30" height="11" viewBox="0 0 172 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M166 46.5C169.038 46.5 171.5 44.0376 171.5 41C171.5 37.9624 169.038 35.5 166 35.5V46.5ZM2.11091 37.1109C-0.0369709 39.2588 -0.0369709 42.7412 2.11091 44.8891L37.1127 79.8909C39.2606 82.0388 42.743 82.0388 44.8909 79.8909C47.0388 77.743 47.0388 74.2606 44.8909 72.1127L13.7782 41L44.8909 9.8873C47.0388 7.73942 47.0388 4.25701 44.8909 2.10913C42.743 -0.0387566 39.2606 -0.0387566 37.1127 2.10913L2.11091 37.1109ZM166 35.5L6 35.5V46.5L166 46.5V35.5Z" fill="#E2001A"/>
+        </svg>
+        Zpět na web <b>mild.blue</b></a> 
+    </div>
+</div>  
