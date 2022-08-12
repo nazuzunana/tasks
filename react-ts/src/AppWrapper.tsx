@@ -12,9 +12,7 @@ export const AppWrapper = ({ user }: Props) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!user) {
-      navigate("/login");
-    }
+    navigate(user ? "/" : "/login");
   }, [navigate, user]);
 
   return (

@@ -1,29 +1,25 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
-
 export class LoginComponent implements OnInit {
+  isFirstActive = false;
+  cta = 'K objednání vyšetření';
 
-  isFirstActive = false
-  cta = 'K objednání vyšetření'
+  constructor() {}
 
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onClickIsFirstActive(event: Event) {
     if (this.isFirstActive) {
-      this.isFirstActive = false
-      this.cta = 'K objednání vyšetření'
+      this.isFirstActive = false;
+      this.cta = 'K objednání vyšetření';
     } else {
-      this.isFirstActive = true
-      this.cta = 'K objednání receptu'
+      this.isFirstActive = true;
+      this.cta = 'K objednání receptu';
     }
   }
 }

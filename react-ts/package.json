@@ -29,7 +29,6 @@
     "eject": "react-scripts eject",
     "prettier-format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
     "prettier-check": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}'",
-    "lint-fix": "eslint -c .eslintrc.json --fix --max-warnings=0 src",
     "lint-check": "eslint -c .eslintrc.json --max-warnings=0 src"
   },
   "eslintConfig": {

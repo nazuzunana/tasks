@@ -17,5 +17,5 @@ export const Login = () => {
    *    - store user object in browser localStorage (use userLocalStorageKey constant from src/model/User.ts)
    *    - navigate to Home component (use useNavigate() hook). Route to Home component is "/".
    */
-  return <div>Todo: Implement login form here :)</div>;
+  return <div>Todo: Implement login UI here :)</div>;
 };
