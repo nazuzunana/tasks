@@ -1,0 +1,99 @@
+:root {
+  --text: #313131;
+  --input: #e6f5f5;
+  --link: #6bafae;
+  --linkHover: #5a9493;
+}
+
+*,
+body,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.7rem;
+  letter-spacing: 0.5px;
+}
+
+body {
+  color: var(--text);
+  padding: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--linkHover);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+input,
+.login-btn {
+  width: 100%;
+  height: 3.5rem;
+  border: none;
+  border-radius: 0%;
+  font-size: medium;
+}
+
+input {
+  background-color: var(--input);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.login-btn {
+  background-color: var(--link);
+  color: white;
+}
+
+.login-btn:hover {
+  cursor: pointer;
+  background-color: var(--linkHover);
+}
+
+.login-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .login-form {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1366px) {
+  .login-form {
+    width: 30%;
+  }
+}
