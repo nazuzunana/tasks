@@ -27,15 +27,15 @@ export const Login = () => {
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
 
-  const loginForm = (e: React.SyntheticEvent) => {
-    e.preventDefault();
+  const logIn = (event: React.SyntheticEvent) => {
+    event.preventDefault();
     const patient1: User = {
       firstName: "John",
       lastName: "Doe",
-      dateOfBirth: "12. 12. 1986",
+      dateOfBirth: new Date("12. 12. 1986"),
       weight: 86,
       height: 185,
-      diagnoses: "Arthritis and Diabetes",
+      diagnoses: ["Arthritis", "Diabetes"],
     };
 
     localStorage.setItem(userLocalStorageKey, JSON.stringify(patient1));
@@ -46,15 +46,15 @@ export const Login = () => {
   return (
     <div className="login-container">
       <h2>Sign In</h2>
-      <form className="login-form" onSubmit={loginForm}>
+      <form className="login-form" onSubmit={logIn}>
         <input
           type="text"
           placeholder="Username"
           required
           value={username}
           onChange={(event) => {
-            const vstup = event.target.value;
-            setUsername(vstup);
+            const input = event.target.value;
+            setUsername(input);
           }}
         />
         <input
@@ -63,8 +63,8 @@ export const Login = () => {
           required
           value={password}
           onChange={(event) => {
-            const vstup = event.target.value;
-            setPassword(vstup);
+            const input = event.target.value;
+            setPassword(input);
           }}
         />
         <button type="submit" className="login-btn" disabled={username === "" || password === ""}>

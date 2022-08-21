@@ -1,7 +1,6 @@
 import userEvent from "@testing-library/user-event";
 import { User, userLocalStorageKey } from "../model/User";
 
-//zuzana (props)
 export const UserDiagnoses = () => {
   const patientString: string | null = localStorage.getItem(userLocalStorageKey);
   const patient1: User = JSON.parse(String(patientString));
@@ -14,16 +13,16 @@ export const UserDiagnoses = () => {
    * 2. Display list of user diagnoses (see Todo)
    */
   return (
-    // zuzana
     <div className="diagnose__list">
-      Todo: Display list of user diagnoses here.
       <div className="user__name">
         <p>
           {patient1.firstName} {patient1.lastName}
         </p>
       </div>
       <div className="user__info">
-        <p>Date of birth: {patient1.dateOfBirth}</p>
+        <p>
+          <>Date of birth: {patient1.dateOfBirth}</>
+        </p>
         <p>Weight: {patient1.weight} kg</p>
         <p>Height: {patient1.height} cm</p>
       </div>

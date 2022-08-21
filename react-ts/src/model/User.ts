@@ -4,10 +4,10 @@ export interface User {
   // zuzana
   firstName: string;
   lastName: string;
-  dateOfBirth: string;
+  dateOfBirth: Date;
   weight: number;
   height: number;
-  diagnoses: string;
+  diagnoses: string[];
 }
 
 // Use this key for storing user in browser localStorage
