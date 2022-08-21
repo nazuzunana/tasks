@@ -40,7 +40,7 @@ export const Login = () => {
 
     localStorage.setItem(userLocalStorageKey, JSON.stringify(patient1));
 
-    navigate("/");
+    navigate("/home");
   };
 
   return (
