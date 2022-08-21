@@ -3,6 +3,8 @@
   --input: #e6f5f5;
   --link: #6bafae;
   --linkHover: #5a9493;
+  --disabledButton: #e5e5e5;
+  --disabledText: #ababab;
 }
 
 *,
@@ -65,7 +67,8 @@ input,
 
 button[type="submit"]:disabled {
   pointer-events: none;
-  opacity: 30%;
+  background-color: var(--disabledButton);
+  color: var(--disabledText);
 }
 
 input {
