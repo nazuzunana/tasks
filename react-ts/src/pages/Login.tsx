@@ -52,20 +52,14 @@ export const Login = () => {
           placeholder="Username"
           required
           value={username}
-          onChange={(event) => {
-            const input = event.target.value;
-            setUsername(input);
-          }}
+          onChange={(event) => setUsername(event.target.value)}
         />
         <input
           type="password"
           placeholder="Password"
           required
           value={password}
-          onChange={(event) => {
-            const input = event.target.value;
-            setPassword(input);
-          }}
+          onChange={(event) => setPassword(event.target.value)}
         />
         <button type="submit" className="login-btn" disabled={username === "" || password === ""}>
           Sign In
