@@ -63,6 +63,11 @@ input,
   font-size: medium;
 }
 
+button[type="submit"]:disabled {
+  pointer-events: none;
+  opacity: 30%;
+}
+
 input {
   background-color: var(--input);
   padding: 1rem;
