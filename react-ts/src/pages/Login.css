@@ -54,6 +54,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 25rem;
 }
 
 input,
@@ -92,16 +93,4 @@ input {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-}
-
-@media (min-width: 768px) {
-  .login-form {
-    width: 40%;
-  }
-}
-
-@media (min-width: 1366px) {
-  .login-form {
-    width: 30%;
-  }
 }
