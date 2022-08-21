@@ -29,12 +29,8 @@ html {
 }
 
 a {
-  color: var(--text);
-  text-decoration: none;
-}
-
-a {
   color: var(--link);
+  text-decoration: none;
 }
 
 a:hover {
