@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+@mixin font() {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
 .login-container {
   @include flexCenter(column);
   gap: 2rem;
@@ -18,36 +24,32 @@
   max-width: 25rem;
 }
 
-input,
-.login-btn {
+input {
   width: 100%;
   height: 3.5rem;
   border: none;
-  font-size: 0.9rem;
-  line-height: 1.7rem;
-  letter-spacing: 0.5px;
+  background-color: $input-color;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  @include font();
+}
+
+#{&} .login-btn {
+  @extend input;
+  background-color: $link-btn-color;
+  color: $white;
+  margin-bottom: 0rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hover-color;
+  }
 }
 
 button[type="submit"]:disabled {
   pointer-events: none;
   background-color: $disabled-btn-color;
   color: $disabled-btn-text;
-}
-
-input {
-  background-color: $input-color;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.login-btn {
-  background-color: $link-btn-color;
-  color: $white;
-
-  &:hover {
-    cursor: pointer;
-    background-color: $hover-color;
-  }
 }
 
 .login-links {

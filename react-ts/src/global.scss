@@ -1,14 +1,18 @@
 @import "./resets";
 @import "./variables";
 
+@mixin font() {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
 body,
 ::before,
 ::after {
   color: $text-color;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.7rem;
-  letter-spacing: 0.5px;
+  font-family: $font-family;
+  @include font();
 }
 
 html {

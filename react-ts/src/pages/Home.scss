@@ -29,7 +29,7 @@
 .box {
   @include flexCenter(row);
   justify-content: space-between;
-  border: 1px solid $border-color;
+  border: 0.06rem solid $border-color;
   width: 100%;
   padding: 1rem;
   gap: 1rem;

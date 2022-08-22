@@ -28,7 +28,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #cbe3e3;
+  border: 0.06rem solid #cbe3e3;
   width: 100%;
   padding: 1rem;
   gap: 1rem;
