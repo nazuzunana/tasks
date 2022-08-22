@@ -1,9 +1,12 @@
-import userEvent from "@testing-library/user-event";
+// import userEvent from "@testing-library/user-event";
 import { User, userLocalStorageKey } from "../model/User";
+// import { useState, useEffect } from "react";
 
 export const UserDiagnoses = () => {
+  // const [patient, setPatient] = useState<User>();
+
   const patientString: string | null = localStorage.getItem(userLocalStorageKey);
-  const patient1: User = JSON.parse(String(patientString));
+  const patient: User = JSON.parse(String(patientString));
 
   /**
    * TODO
@@ -14,20 +17,26 @@ export const UserDiagnoses = () => {
    */
   return (
     <div className="diagnose__list">
-      <div className="user__name">
-        <p>
-          {patient1.firstName} {patient1.lastName}
+      <div className="box">
+        <p className="box__title">Date of birth</p>
+        <p className="box__info">
+          <>{patient.dateOfBirth}</>
         </p>
       </div>
-      <div className="user__info">
-        <p>
-          <>Date of birth: {patient1.dateOfBirth}</>
-        </p>
-        <p>Weight: {patient1.weight} kg</p>
-        <p>Height: {patient1.height} cm</p>
+      <div className="box">
+        <p className="box__title">Weight</p>
+        <p className="box__info">{patient.weight} kg</p>
       </div>
-      <div className="user__diagnoses">
-        <p>Diagnoses: {patient1.diagnoses}</p>
+      <div className="box">
+        <p className="box__title">Height</p>
+        <p className="box__info">{patient.height} cm</p>
+      </div>
+      <div className="box">
+        <p className="box__title">Diagnoses</p>
+        <div className="user__diagnoses">
+          <p className="box__info">{patient.diagnoses[0]}</p>
+          <p className="box__info">{patient.diagnoses[1]}</p>
+        </div>
       </div>
     </div>
   );

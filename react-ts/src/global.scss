@@ -1,0 +1,32 @@
+@import "./resets";
+@import "./variables";
+
+body,
+::before,
+::after {
+  color: $text-color;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.5px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: $link-btn-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $hover-color;
+  }
+}
+
+.container {
+  margin: auto;
+  padding: 2rem;
+  width: 100%;
+}

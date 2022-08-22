@@ -1,4 +1,6 @@
 import { UserDiagnoses } from "../components/UserDiagnoses";
+import "./Home.css";
+import "../global.css";
 
 export const Home = () => {
   /**
@@ -10,8 +12,8 @@ export const Home = () => {
    * 4. Send user's diagnoses to UserDiagnoses component
    */
   return (
-    <div>
-      <h1>Todo: Display name of the user here</h1>
+    <div className="container home-container">
+      <p className="user__name">Todo: Display name of the user here</p>
       <UserDiagnoses />
     </div>
   );

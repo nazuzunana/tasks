@@ -1,0 +1,56 @@
+@import "../variables";
+@import "../resets";
+
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+}
+
+.login-container {
+  @include flexCenter(column);
+  gap: 2rem;
+}
+
+.login-form {
+  @include flexCenter(column);
+  width: 100%;
+  max-width: 25rem;
+}
+
+input,
+.login-btn {
+  width: 100%;
+  height: 3.5rem;
+  border: none;
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.5px;
+}
+
+button[type="submit"]:disabled {
+  pointer-events: none;
+  background-color: $disabled-btn-color;
+  color: $disabled-btn-text;
+}
+
+input {
+  background-color: $input-color;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.login-btn {
+  background-color: $link-btn-color;
+  color: $white;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hover-color;
+  }
+}
+
+.login-links {
+  @include flexCenter(column);
+  gap: 1rem;
+}

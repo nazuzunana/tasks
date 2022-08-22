@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
+import "../global.css";
 import { User, userLocalStorageKey } from "../model/User";
 import { useNavigate } from "react-router-dom";
 
@@ -29,7 +30,7 @@ export const Login = () => {
 
   const logIn = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    const patient1: User = {
+    const patient: User = {
       firstName: "John",
       lastName: "Doe",
       dateOfBirth: new Date("12. 12. 1986"),
@@ -38,13 +39,13 @@ export const Login = () => {
       diagnoses: ["Arthritis", "Diabetes"],
     };
 
-    localStorage.setItem(userLocalStorageKey, JSON.stringify(patient1));
+    localStorage.setItem(userLocalStorageKey, JSON.stringify(patient));
 
     navigate("/home");
   };
 
   return (
-    <div className="login-container">
+    <div className="container login-container">
       <h2>Sign In</h2>
       <form className="login-form" onSubmit={logIn}>
         <input
