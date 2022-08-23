@@ -5,6 +5,10 @@ import { User, userLocalStorageKey } from "../model/User";
 export const UserDiagnoses = () => {
   // const [patient, setPatient] = useState<User>();
 
+  // useEffect(() => {
+  //   setPatient(patientString ? JSON.parse(patientString) : undefined);
+  // });
+
   const patientString: string | null = localStorage.getItem(userLocalStorageKey);
   const patient: User = JSON.parse(String(patientString));
 
