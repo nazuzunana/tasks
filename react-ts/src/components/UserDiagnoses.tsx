@@ -19,7 +19,8 @@ export const UserDiagnoses = () => {
    *    - Props will contain list of user's diagnoses
    * 2. Display list of user diagnoses (see Todo)
    */
-  return (
+
+  return patient ? (
     <div className="diagnose__list">
       <div className="box">
         <p className="box__title">Date of birth</p>
@@ -43,5 +44,7 @@ export const UserDiagnoses = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <p className="patient__message">Patient not found.</p>
   );
 };

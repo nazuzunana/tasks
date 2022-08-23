@@ -37,3 +37,7 @@
     font-weight: map-get($font-weights, bold);
   }
 }
+
+.patient__message {
+  text-align: center;
+}
