@@ -1,16 +1,14 @@
 // import userEvent from "@testing-library/user-event";
 import { User, userLocalStorageKey } from "../model/User";
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export const UserDiagnoses = () => {
-  // const [patient, setPatient] = useState<User>();
+  const [patient, setPatient] = useState<User>();
 
-  // useEffect(() => {
-  //   setPatient(patientString ? JSON.parse(patientString) : undefined);
-  // });
-
-  const patientString: string | null = localStorage.getItem(userLocalStorageKey);
-  const patient: User = JSON.parse(String(patientString));
+  useEffect(() => {
+    const patientString = localStorage.getItem(userLocalStorageKey);
+    setPatient(patientString ? JSON.parse(patientString) : undefined);
+  }, []);
 
   /**
    * TODO
