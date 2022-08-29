@@ -1,8 +1,7 @@
 // import userEvent from "@testing-library/user-event";
-import { User } from "../model/User";
 
 interface Props {
-  diagnoses?: User;
+  diagnoses: string[];
 }
 
 export const UserDiagnoses = ({ diagnoses }: Props) => {
@@ -17,7 +16,11 @@ export const UserDiagnoses = ({ diagnoses }: Props) => {
   return (
     <div className="user__diagnoses">
       <ul>
-        <li className="box__info">{diagnoses}</li>
+        {diagnoses.map((diagnosis) => (
+          <li key={diagnosis} className="box__info">
+            {diagnosis}
+          </li>
+        ))}
       </ul>
     </div>
   );

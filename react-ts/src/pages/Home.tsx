@@ -42,9 +42,7 @@ export const Home = () => {
         </div>
         <div className="box">
           <p className="box__title">Diagnoses</p>
-          {patient.diagnoses.map((diagnose) => (
-            <UserDiagnoses key={diagnose} diagnoses={diagnose} />
-          ))}
+          <UserDiagnoses diagnoses={patient.diagnoses} />
         </div>
       </div>
     </div>
